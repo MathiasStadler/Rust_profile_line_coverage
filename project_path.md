@@ -39,11 +39,14 @@ touch README.md \
 && rustup show \
 && mkdir tests
 ```
-!-- To comply with the format -->
->![!TIP]
->renew test folder
->`rm -rf test_folder/ && mkdir -p $_ && cd $_ && pwd &&   ls -la .
-``
+<!-- To comply with the format -->
+>[!TIP] - Markdown inline code block - https://markdown.land/markdown-code-block
+#FIXIT Link :-)
+>Use `print("Hello, world!")` to print a message to the screen.
+<!-- To comply with the format -->
+>[!TIP] - renew test folder
+>`rm -rf test_folder/ || true && mkdir -p $_ && cd $_ && pwd &&   ls -la .`
+>> `|| true `works if the file/directory does not exist and does not throw an error 
 <!-- To comply with the format -->
 ## Init a new rust based project inside the previously generated folder for MS VSCode
 <!-- To comply with the format -->
@@ -51,11 +54,11 @@ touch README.md \
 
 mkdir -p .vscode \
 && touch .vscode/settings.json \
-&& cat <<EOF > print.sh
+&& cat <<EoF >.vscode/settings.json
 #!/bin/bash
 echo \$PWD
 echo $PWD
-EOF \
+EoF \
 && mkdir -p img \
 && wget  -P img/ "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/360d1327d05280d53de5fa816c522f89a35891ca/img/link_symbol.svg" \
 && touch README.md \
